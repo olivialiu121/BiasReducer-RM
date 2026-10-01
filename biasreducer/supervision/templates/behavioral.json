@@ -1,0 +1,46 @@
+{
+  "_comment": "Behavioral attribute definitions: the exact lexicons, regexes and parameters computing the per-response measurement y_a. Lexicon-based attributes reference the other banks (hedges.json, sycophancy.json, confidence.json) so a single source defines each attribute.",
+  "length": {
+    "type": "token_count",
+    "tokenizer": "whitespace"
+  },
+  "verbosity_matched": {
+    "type": "repetition",
+    "ngram": 3,
+    "formula": "1 - unique_ngrams/total_ngrams (0 if < 20 tokens); repetition ratio, higher = more redundant"
+  },
+  "hedging": {
+    "type": "lexicon_count_per_100w",
+    "source": "hedges.json",
+    "fields": [
+      "anti_lead_ins",
+      "anti_adverbs"
+    ],
+    "match": "case-insensitive word-boundary"
+  },
+  "sycophancy_surface": {
+    "type": "pattern_count",
+    "source": "sycophancy.json",
+    "fields": [
+      "anti_opener_patterns",
+      "anti_closer_patterns"
+    ],
+    "scope": "openers scanned in first 200 chars, closers in last 200"
+  },
+  "format_bullets": {
+    "type": "markdown_density_per_line",
+    "regex_bullet": "^\\s*(?:[-*+]\\s|\\d+[.)]\\s|#{1,6}\\s)",
+    "count_bold_runs": true
+  },
+  "confidence": {
+    "type": "lexicon_balance_per_100w",
+    "source": "confidence.json",
+    "positive_field": "strong_to_weak",
+    "negative_field": "weaken_to_strong",
+    "formula": "(strong_hits - weak_hits) per 100 words"
+  },
+  "emoji_excl": {
+    "type": "regex_count_per_100w",
+    "regex": "[\\U0001F300-\\U0001FAFF\\U00002600-\\U000027BF]|!(?=\\s|$)"
+  }
+}

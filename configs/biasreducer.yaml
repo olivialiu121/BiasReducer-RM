@@ -1,0 +1,29 @@
+# BiasReducer default settings. Every hyperparameter of the method lives here.
+artifacts_dir: artifacts
+source_dataset: skywork_pref        # configs/data/<name>.yaml
+seeds: [0, 1]                       # independent dictionary fits; results are averaged over seeds
+
+representation:                     # Stage 1 — attribute-aligned encoder-decoder
+  dictionary_size: null             # K; null -> max(64, round(d / 16))
+  active_coordinates: null          # k_act; null -> K / 2
+  sparsity: 0.01                    # lambda_sp  (L1 on post-TopK codes)
+  incoherence: 0.1                  # beta       (off-diagonal Gram penalty on V)
+  gamma_behavioral: 1.0             # gamma_b
+  gamma_intervention: 0.1           # gamma_i
+  gamma_artifact: 0.1               # gamma_a
+  m_corr: 0.3                       # margin in L_axis
+  m_conc: 1.0                       # margin in L_int and L_art
+  kappa_decor: 0.1                  # cross-attribute leakage weight in L_beh
+  lr: 1.0e-3
+  epochs: 200
+  batch_size: 512                   # natural preference contrasts per step
+  intervention_batch_frac: 0.08     # controlled-rewrite rows per step, as a fraction of batch_size
+
+edit:                               # Stage 2 — edit direction and amount
+  n_natural_responses: 20000        # source-train responses used to estimate C_a
+  n_aggressiveness: 4000            # of those, how many score the reward change Agg_a(lambda)
+  lambda_grid: [0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1.0, 1.25, 1.5, 1.75, 2.0]
+  source_budget: 0.02               # tau_src: max drop in source-validation preference accuracy
+
+select:                             # Stage 3 — dataset-specific selection and composition
+  k_max: 4                          # edit-complexity cap of BiasReducer-M

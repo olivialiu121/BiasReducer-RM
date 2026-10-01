@@ -1,0 +1,16 @@
+# run outputs
+artifacts/
+logs/
+*.log
+
+# environment and secrets
+.env
+.env.*
+.venv/
+
+# python / editor
+__pycache__/
+*.pyc
+.DS_Store
+.idea/
+.vscode/

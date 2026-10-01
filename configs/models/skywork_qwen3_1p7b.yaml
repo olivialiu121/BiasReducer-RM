@@ -1,0 +1,7 @@
+name: skywork_qwen3_1p7b
+hf_id: Skywork/Skywork-Reward-V2-Qwen3-1.7B
+arch: seq_cls
+head_attr: score
+forward_dtype: bfloat16
+batch_size: 8
+max_length: 4096

@@ -1,0 +1,343 @@
+{
+  "_comment": "Confidence modal lexicon. 'weaken_to_strong' is the forward rewrite (hedged -> assertive); 'strong_to_weak' is the reverse. Entries are [find, replace]; replace '' means delete. Applied longest-first, word-boundary, case-aware, outside inline code. A pair is emitted only if at least 3 swaps fired.",
+  "weaken_to_strong": [
+    [
+      "it might be the case that ",
+      ""
+    ],
+    [
+      "it might be that ",
+      ""
+    ],
+    [
+      "it may be that ",
+      ""
+    ],
+    [
+      "it could be that ",
+      ""
+    ],
+    [
+      "might be able to",
+      "can"
+    ],
+    [
+      "may be able to",
+      "can"
+    ],
+    [
+      "it seems that ",
+      ""
+    ],
+    [
+      "it appears that ",
+      ""
+    ],
+    [
+      "it seems like ",
+      ""
+    ],
+    [
+      "seems to be",
+      "is"
+    ],
+    [
+      "appears to be",
+      "is"
+    ],
+    [
+      "tends to be",
+      "is"
+    ],
+    [
+      "tend to be",
+      "are"
+    ],
+    [
+      "might be",
+      "is"
+    ],
+    [
+      "may be",
+      "is"
+    ],
+    [
+      "could be",
+      "is"
+    ],
+    [
+      "suggests that",
+      "shows that"
+    ],
+    [
+      "suggest that",
+      "show that"
+    ],
+    [
+      "i think that ",
+      ""
+    ],
+    [
+      "i believe that ",
+      ""
+    ],
+    [
+      "i think ",
+      ""
+    ],
+    [
+      "i believe ",
+      ""
+    ],
+    [
+      "probably ",
+      ""
+    ],
+    [
+      "possibly ",
+      ""
+    ],
+    [
+      "perhaps ",
+      ""
+    ],
+    [
+      "maybe ",
+      ""
+    ],
+    [
+      "arguably ",
+      ""
+    ],
+    [
+      "is likely to be",
+      "is"
+    ],
+    [
+      "are likely to be",
+      "are"
+    ],
+    [
+      "is likely to",
+      "will"
+    ],
+    [
+      "are likely to",
+      "will"
+    ],
+    [
+      "will likely",
+      "will"
+    ],
+    [
+      "would likely",
+      "will"
+    ],
+    [
+      "most likely ",
+      ""
+    ],
+    [
+      "quite likely ",
+      ""
+    ],
+    [
+      "somewhat ",
+      ""
+    ],
+    [
+      "relatively ",
+      ""
+    ],
+    [
+      "fairly ",
+      ""
+    ],
+    [
+      "can potentially",
+      "will"
+    ],
+    [
+      "could potentially",
+      "will"
+    ],
+    [
+      "potentially ",
+      ""
+    ],
+    [
+      "might ",
+      "will "
+    ],
+    [
+      "may ",
+      "will "
+    ],
+    [
+      "could ",
+      "will "
+    ],
+    [
+      "often ",
+      ""
+    ],
+    [
+      "usually ",
+      ""
+    ],
+    [
+      "typically ",
+      ""
+    ],
+    [
+      "generally ",
+      ""
+    ],
+    [
+      "in general, ",
+      ""
+    ],
+    [
+      "in most cases, ",
+      ""
+    ],
+    [
+      "to some extent, ",
+      ""
+    ],
+    [
+      "sort of ",
+      ""
+    ],
+    [
+      "kind of ",
+      ""
+    ],
+    [
+      "a bit ",
+      ""
+    ],
+    [
+      "it is likely that ",
+      ""
+    ],
+    [
+      "it is possible that ",
+      ""
+    ],
+    [
+      "there is a chance that ",
+      ""
+    ],
+    [
+      "one could say that ",
+      ""
+    ],
+    [
+      "more or less ",
+      ""
+    ],
+    [
+      "seems ",
+      "is "
+    ],
+    [
+      "seem ",
+      "are "
+    ]
+  ],
+  "strong_to_weak": [
+    [
+      "will always",
+      "may often"
+    ],
+    [
+      "is definitely",
+      "is probably"
+    ],
+    [
+      "is certainly",
+      "is likely"
+    ],
+    [
+      "is always",
+      "is usually"
+    ],
+    [
+      "are always",
+      "are usually"
+    ],
+    [
+      "is never",
+      "is rarely"
+    ],
+    [
+      "are never",
+      "are rarely"
+    ],
+    [
+      "definitely ",
+      "probably "
+    ],
+    [
+      "certainly ",
+      "likely "
+    ],
+    [
+      "undoubtedly ",
+      "arguably "
+    ],
+    [
+      "absolutely ",
+      "quite "
+    ],
+    [
+      "guarantees that",
+      "suggests that"
+    ],
+    [
+      "guarantees",
+      "suggests"
+    ],
+    [
+      "ensures that",
+      "should mean that"
+    ],
+    [
+      "proves that",
+      "suggests that"
+    ],
+    [
+      "shows that",
+      "suggests that"
+    ],
+    [
+      "demonstrates that",
+      "suggests that"
+    ],
+    [
+      "must ",
+      "might "
+    ],
+    [
+      "will ",
+      "may "
+    ],
+    [
+      "cannot ",
+      "may not "
+    ],
+    [
+      "always ",
+      "often "
+    ],
+    [
+      "never ",
+      "rarely "
+    ],
+    [
+      "every time",
+      "in most cases"
+    ]
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "_comment": "Neutral-insertion banks for matched-control rewrites: affect-neutral material of matched size inserted at the same positions, so h(attribute rewrite) - h(control rewrite) cancels the shared rewrite artifact within a pair. 'markers' are sentence-prefix discourse markers keyed by word count (mirror hedge templates); 'sentence_fillers' are content-free sentences by word count (mirror verbosity restatements); 'openers'/'closers' by word count (mirror the sycophancy banks); 'end_markers' are single neutral tokens appended at sentence ends (mirror emoji).",
+  "markers": {
+    "1": [
+      "Additionally,",
+      "Furthermore,",
+      "Moreover,",
+      "Meanwhile,",
+      "Separately,",
+      "Relatedly,"
+    ],
+    "2": [
+      "In addition,",
+      "At present,",
+      "In practice,",
+      "In turn,",
+      "Beyond that,",
+      "On balance,"
+    ],
+    "3": [
+      "At this point,",
+      "In this regard,",
+      "On this note,",
+      "In any case,",
+      "As noted here,"
+    ],
+    "4": [
+      "At this point then,",
+      "In the next part,",
+      "As the next step,",
+      "On this note then,"
+    ],
+    "5": [
+      "Moving on at this point,",
+      "In the next part here,",
+      "As for the next point,"
+    ],
+    "6": [
+      "Moving on to the next point,",
+      "In the next part of this,",
+      "As for the next point here,"
+    ]
+  },
+  "sentence_fillers": [
+    "The next point follows directly from the one above.",
+    "The following part continues the discussion from the point made above.",
+    "The remainder of this response continues in the same order as the earlier parts.",
+    "The next section of this response picks up where the previous section left off and continues.",
+    "The rest of this response proceeds through the remaining points in the same order in which they were introduced above.",
+    "The following portion of this response moves through each of the remaining points in turn, in the same order in which they were first introduced above."
+  ],
+  "openers": {
+    "2": [
+      "Answer below.",
+      "See below.",
+      "Details follow."
+    ],
+    "3": [
+      "The answer follows.",
+      "Here it is.",
+      "Details are below."
+    ],
+    "4": [
+      "The answer is below.",
+      "The details follow here.",
+      "The response follows below."
+    ],
+    "5": [
+      "The full answer follows below.",
+      "The details are set out below.",
+      "The response is set out below."
+    ],
+    "6": [
+      "The full answer is set out below.",
+      "The details are as set out below."
+    ],
+    "7": [
+      "The response to this is set out below.",
+      "The answer to this is set out below."
+    ],
+    "8": [
+      "The response to this question is set out below.",
+      "The answer to this question is set out below."
+    ],
+    "9": [
+      "The full response to this question is set out below."
+    ]
+  },
+  "closers": {
+    "3": [
+      "That concludes this.",
+      "This ends here.",
+      "That is all."
+    ],
+    "4": [
+      "That concludes this answer.",
+      "This ends the response.",
+      "That covers the points."
+    ],
+    "5": [
+      "That concludes this answer here.",
+      "This ends the response above.",
+      "That covers the points above."
+    ],
+    "6": [
+      "That concludes the answer given above.",
+      "This ends the response set out above."
+    ],
+    "7": [
+      "That concludes the answer that was given above.",
+      "This ends the response that was set out above."
+    ],
+    "8": [
+      "That concludes the answer that was set out above.",
+      "This is the end of the response given above."
+    ],
+    "9": [
+      "That is the end of the answer set out above."
+    ]
+  },
+  "end_markers": [
+    "†",
+    "‡",
+    "§"
+  ]
+}

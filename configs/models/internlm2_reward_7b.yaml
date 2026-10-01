@@ -1,0 +1,9 @@
+name: internlm2_reward_7b
+hf_id: internlm/internlm2-7b-reward
+arch: reward_model                  # custom InternLM2ForRewardModel; scores at an appended reward token
+head_attr: v_head
+trust_remote_code: true
+tokenizer_hf_id: internlm/internlm2-1_8b-reward   # same vocabulary and reward token; loads cleanly
+forward_dtype: bfloat16
+batch_size: 2
+max_length: 4096

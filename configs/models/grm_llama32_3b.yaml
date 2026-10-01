@@ -1,0 +1,7 @@
+name: grm_llama32_3b
+hf_id: Ray2333/GRM-Llama3.2-3B-rewardmodel-ft
+arch: seq_cls
+head_attr: score
+forward_dtype: float16
+batch_size: 16
+max_length: 4096

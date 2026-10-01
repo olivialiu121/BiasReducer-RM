@@ -1,0 +1,16 @@
+{
+  "_comment": "Connectives for length_expand: 'restate' precedes a restated sentence; 'recap' precedes a duplicated concluding paragraph.",
+  "restate": [
+    "In other words,",
+    "Put differently,",
+    "To put it another way,",
+    "That is to say,",
+    "Simply put,"
+  ],
+  "recap": [
+    "To recap:",
+    "To summarize:",
+    "In summary:",
+    "To sum up:"
+  ]
+}

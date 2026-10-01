@@ -1,0 +1,15 @@
+{
+  "_comment": "Verbosity filler-restatement templates for verbosity_matched. '{sent}' is replaced by a (safely lower-cased) copy of an earlier sentence from the same response; these add redundancy without new content and length is re-balanced by trimming elsewhere.",
+  "restate": [
+    "As mentioned above, {sent}",
+    "To reiterate, {sent}",
+    "To repeat the earlier point, {sent}",
+    "In other words, {sent}",
+    "Again, {sent}",
+    "As noted earlier, {sent}",
+    "To restate this, {sent}",
+    "Put differently, {sent}",
+    "It bears repeating that {sent}",
+    "To emphasize the point once more, {sent}"
+  ]
+}

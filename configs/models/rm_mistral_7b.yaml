@@ -1,0 +1,7 @@
+name: rm_mistral_7b
+hf_id: weqweasdas/RM-Mistral-7B
+arch: seq_cls
+head_attr: score
+forward_dtype: bfloat16
+batch_size: 8
+max_length: 4096

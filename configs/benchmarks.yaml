@@ -1,0 +1,22 @@
+# Evaluation benchmarks. This file is the only place benchmarks are named;
+# every script takes a benchmark key from here. `selection: whole` makes one
+# edit-selection decision per benchmark; `selection: per_group` selects separately
+# for every group (JudgeBiasBench: its seven bias subsets).
+benchmarks:
+  rmbench_hard:
+    builder: rmbench_hard
+    hf_id: THU-KEG/RM-Bench
+    split: train
+    selection: whole
+  arena_styleconflict:
+    builder: arena_styleconflict
+    hf_id: lmarena-ai/arena-human-preference-140k
+    split: train
+    length_ratio: 1.3               # style-favored side is >= 1.3x longer and at least as formatted
+    max_pairs: 1000
+    selection: whole
+  judgebiasbench:
+    builder: judgebiasbench
+    source_dir: null                # local clone of Joe-Hall-Lee/JudgeBiasBench, its data/eval directory
+    subsets: [length, authority, beauty, assertiveness, sycophancy, sentiment, concreteness]
+    selection: per_group

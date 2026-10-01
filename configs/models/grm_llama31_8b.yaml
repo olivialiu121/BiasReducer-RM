@@ -1,0 +1,7 @@
+name: grm_llama31_8b
+hf_id: Ray2333/GRM_Llama3.1_8B_rewardmodel-ft
+arch: seq_cls
+head_attr: score
+forward_dtype: bfloat16
+batch_size: 8
+max_length: 4096

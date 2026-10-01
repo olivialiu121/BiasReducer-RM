@@ -1,0 +1,56 @@
+# The seven response attributes BiasReducer learns and the controlled rewrites
+# that supervise them. Attribute order fixes the coordinate order in the
+# dictionary and the deterministic tie-break used during edit selection.
+#
+# Each attribute has a behavioral measurement y_a (biasreducer/supervision/behavioral.py)
+# and zero or more intervention streams. A stream names a rewrite rule, which side of
+# it to use ("fwd" = attribute increased, "anti" = attribute decreased, "control" =
+# attribute rewrite minus its matched-control rewrite) and the expected sign of the
+# coordinate response. `artifact_adjusted` streams have the shared rewrite-artifact
+# direction projected out before use.
+attributes:
+  length:
+    interventions:
+      - {rewrite: length_expand,   side: fwd,     sign: +1}
+      - {rewrite: length_contract, side: fwd,     sign: -1}
+  verbosity_matched:
+    interventions:
+      - {rewrite: verbosity_matched, side: control, sign: +1}
+  hedging:
+    interventions: []                # behavioral supervision only
+  sycophancy_surface:
+    interventions:
+      - {rewrite: sycophancy_surface, side: fwd,  sign: +1, artifact_adjusted: true}
+      - {rewrite: sycophancy_surface, side: anti, sign: -1, artifact_adjusted: true}
+  format_bullets:
+    interventions:
+      - {rewrite: format_bullets, side: fwd,  sign: +1}
+      - {rewrite: format_bullets, side: anti, sign: -1}
+  confidence:
+    interventions:
+      - {rewrite: confidence, side: fwd,  sign: +1}
+      - {rewrite: confidence, side: anti, sign: -1}
+  emoji_excl:
+    interventions:
+      - {rewrite: emoji_excl, side: control, sign: +1}
+
+# Rewrite rules (biasreducer/supervision/transforms/). All forward and reverse rewrite
+# differences are pooled to estimate the shared rewrite-artifact direction.
+rewrites:
+  - length_expand
+  - length_contract
+  - verbosity_matched
+  - format_bullets
+  - hedging
+  - sycophancy_surface
+  - confidence
+  - emoji_excl
+
+# Controlled-rewrite generation from source-train responses.
+generation:
+  seed: 0
+  n_pairs_per_rewrite: 300          # per rewrite and direction
+  max_pairs_per_prompt: 2
+  min_words: 100
+  max_words: 1500
+  max_attempts_factor: 60
